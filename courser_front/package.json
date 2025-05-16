@@ -1,0 +1,13 @@
+{
+  "name": "courser_front",
+  "version": "1.0.0",
+  "description": "Courser在线网课学习平台",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0"
+  }
+}

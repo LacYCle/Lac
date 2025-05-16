@@ -1,0 +1,38 @@
+[2025-05-03 10:28:27] ERROR: 服务器错误: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+[2025-05-03 10:36:18] ERROR: 服务器错误: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+[2025-05-03 10:37:10] ERROR: 服务器错误: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+[2025-05-03 11:24:35] ERROR: 服务器错误: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-05-03 11:30:21] ERROR: 服务器错误: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-05-03 11:47:18] ERROR: 服务器错误: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-05-03 11:51:17] ERROR: 服务器错误: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-05-03 11:56:29] ERROR: 认证失败: invalid signature
+[2025-05-03 11:56:54] ERROR: 认证失败: invalid signature
+[2025-05-03 11:57:46] ERROR: 认证失败: invalid signature
+[2025-05-04 10:24:46] ERROR: 服务器错误: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-05-04 10:37:28] ERROR: 认证失败: invalid signature
+[2025-05-04 10:37:30] ERROR: 认证失败: invalid signature
+[2025-05-04 10:37:31] ERROR: 认证失败: invalid signature
+[2025-05-04 10:37:31] ERROR: 认证失败: invalid signature
+[2025-05-04 10:38:52] ERROR: 认证失败: invalid signature
+[2025-05-04 10:42:27] ERROR: 认证失败: invalid signature
+[2025-05-04 10:50:13] ERROR: 认证失败: invalid signature
+[2025-05-04 10:50:43] ERROR: 认证失败: invalid signature
+[2025-05-04 10:51:13] ERROR: 认证失败: invalid signature
+[2025-05-04 10:51:13] ERROR: 认证失败: invalid signature
+[2025-05-04 10:53:25] ERROR: 认证失败: invalid signature
+[2025-05-04 10:56:32] ERROR: 认证失败: invalid signature
+[2025-05-04 11:12:56] ERROR: 认证失败: invalid signature
+[2025-05-04 11:12:58] ERROR: 认证失败: invalid signature
+[2025-05-04 11:13:20] ERROR: 认证失败: invalid signature
+[2025-05-06 21:33:17] ERROR: 解析Deepseek返回的JSON失败: Unexpected token '准', "[准]" is not valid JSON
+[2025-05-06 21:33:17] ERROR: Deepseek API调用失败: 无法解析搜索结果，请稍后重试
+[2025-05-06 21:40:37] ERROR: 解析Deepseek返回的JSON失败: courses.map is not a function
+[2025-05-06 21:40:37] ERROR: Deepseek API调用失败: 无法解析搜索结果，请稍后重试
+[2025-05-12 15:59:49] ERROR: Deepseek API调用失败: True is not defined
+[2025-05-12 15:59:49] ERROR: 文件解析失败: 课程表解析失败，请稍后重试
+[2025-05-12 15:59:49] ERROR: 处理课程表上传失败: 课程表解析失败，请稍后重试
+[2025-05-12 15:59:49] ERROR: Error: 课程表解析失败，请稍后重试
+    at parseCourseSchedule (E:\Workspace\courser\courser_back\services\deepseekService.js:72:11)
+    at parseFile (E:\Workspace\courser\courser_back\services\fileParserService.js:121:20)
+    at async E:\Workspace\courser\courser_back\index.js:121:27
+[2025-05-12 16:04:24] ERROR: Deepseek API调用失败: True is not defined

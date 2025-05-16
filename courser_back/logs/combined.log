@@ -1,0 +1,635 @@
+[2025-05-02 22:00:34] INFO: 服务器运行在 http://localhost:3000
+[2025-05-02 22:03:15] INFO: 服务器运行在 http://localhost:3000
+[2025-05-02 22:03:15] INFO: 数据库初始化成功
+[2025-05-02 22:28:21] INFO: 服务器运行在 http://localhost:3000
+[2025-05-02 22:28:21] INFO: 数据库初始化成功
+[2025-05-02 22:54:55] INFO: 服务器运行在 http://localhost:3000
+[2025-05-02 22:54:55] INFO: 数据库初始化成功
+[2025-05-02 23:04:20] INFO: 服务器运行在 http://localhost:3000
+[2025-05-02 23:04:20] INFO: 数据库初始化成功
+[2025-05-02 23:47:24] INFO: 服务器运行在 http://localhost:3000
+[2025-05-02 23:47:24] INFO: 数据库初始化成功
+[2025-05-03 00:08:35] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 00:08:35] INFO: 数据库初始化成功
+[2025-05-03 00:08:56] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 00:08:56] INFO: 数据库初始化成功
+[2025-05-03 00:21:13] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 00:21:13] INFO: 数据库初始化成功
+[2025-05-03 00:24:27] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 00:24:27] INFO: 数据库初始化成功
+[2025-05-03 00:25:32] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 00:25:32] INFO: 数据库初始化成功
+[2025-05-03 00:29:12] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 00:29:12] INFO: 数据库初始化成功
+[2025-05-03 00:30:33] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 00:30:33] INFO: 数据库初始化成功
+[2025-05-03 00:31:37] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 00:31:37] INFO: 数据库初始化成功
+[2025-05-03 10:06:45] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 10:06:45] INFO: 数据库初始化成功
+[2025-05-03 10:17:54] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 10:17:54] INFO: 数据库初始化成功
+[2025-05-03 10:18:20] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 10:18:20] INFO: 数据库初始化成功
+[2025-05-03 10:26:19] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 10:26:19] INFO: 数据库初始化成功
+[2025-05-03 10:28:27] ERROR: 服务器错误: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+[2025-05-03 10:36:18] ERROR: 服务器错误: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+[2025-05-03 10:37:10] ERROR: 服务器错误: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+[2025-05-03 11:00:56] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:00:56] INFO: 数据库初始化成功
+[2025-05-03 11:10:31] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:10:31] INFO: 数据库初始化成功
+[2025-05-03 11:11:41] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:11:41] INFO: 数据库初始化成功
+[2025-05-03 11:23:17] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:23:17] INFO: 数据库初始化成功
+[2025-05-03 11:24:35] ERROR: 服务器错误: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-05-03 11:30:01] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:30:01] INFO: 数据库初始化成功
+[2025-05-03 11:30:21] ERROR: 服务器错误: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-05-03 11:43:36] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:43:36] INFO: 数据库初始化成功
+[2025-05-03 11:43:58] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:43:59] INFO: 数据库初始化成功
+[2025-05-03 11:44:15] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:44:15] INFO: 数据库初始化成功
+[2025-05-03 11:45:15] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:45:15] INFO: 数据库初始化成功
+[2025-05-03 11:47:18] ERROR: 服务器错误: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-05-03 11:50:49] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:50:49] INFO: 数据库初始化成功
+[2025-05-03 11:51:17] ERROR: 服务器错误: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-05-03 11:55:20] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:55:20] INFO: 数据库初始化成功
+[2025-05-03 11:56:03] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 11:56:03] INFO: 数据库初始化成功
+[2025-05-03 11:56:29] ERROR: 认证失败: invalid signature
+[2025-05-03 11:56:54] ERROR: 认证失败: invalid signature
+[2025-05-03 11:57:46] ERROR: 认证失败: invalid signature
+[2025-05-03 12:10:15] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 12:10:15] INFO: 数据库初始化成功
+[2025-05-03 12:18:24] INFO: 服务器运行在 http://localhost:3000
+[2025-05-03 12:18:24] INFO: 数据库初始化成功
+[2025-05-04 10:23:44] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 10:23:44] INFO: 数据库初始化成功
+[2025-05-04 10:24:46] ERROR: 服务器错误: Unexpected token '-', "------WebK"... is not valid JSON
+[2025-05-04 10:27:20] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 10:27:20] INFO: 数据库初始化成功
+[2025-05-04 10:29:03] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 10:29:03] INFO: 数据库初始化成功
+[2025-05-04 10:36:06] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 10:36:06] INFO: 数据库初始化成功
+[2025-05-04 10:37:28] ERROR: 认证失败: invalid signature
+[2025-05-04 10:37:30] ERROR: 认证失败: invalid signature
+[2025-05-04 10:37:31] ERROR: 认证失败: invalid signature
+[2025-05-04 10:37:31] ERROR: 认证失败: invalid signature
+[2025-05-04 10:38:22] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 10:38:22] INFO: 数据库初始化成功
+[2025-05-04 10:38:52] ERROR: 认证失败: invalid signature
+[2025-05-04 10:42:27] ERROR: 认证失败: invalid signature
+[2025-05-04 10:43:23] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 10:43:23] INFO: 数据库初始化成功
+[2025-05-04 10:49:53] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 10:49:53] INFO: 数据库初始化成功
+[2025-05-04 10:50:13] ERROR: 认证失败: invalid signature
+[2025-05-04 10:50:43] ERROR: 认证失败: invalid signature
+[2025-05-04 10:51:13] ERROR: 认证失败: invalid signature
+[2025-05-04 10:51:13] ERROR: 认证失败: invalid signature
+[2025-05-04 10:53:25] ERROR: 认证失败: invalid signature
+[2025-05-04 10:56:03] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 10:56:03] INFO: 数据库初始化成功
+[2025-05-04 10:56:32] ERROR: 认证失败: invalid signature
+[2025-05-04 11:02:04] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:02:04] INFO: 数据库初始化成功
+[2025-05-04 11:10:52] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:10:52] INFO: 数据库初始化成功
+[2025-05-04 11:11:02] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:11:02] INFO: 数据库初始化成功
+[2025-05-04 11:11:07] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:11:07] INFO: 数据库初始化成功
+[2025-05-04 11:11:15] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:11:15] INFO: 数据库初始化成功
+[2025-05-04 11:11:26] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:11:26] INFO: 数据库初始化成功
+[2025-05-04 11:12:03] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:12:03] INFO: 数据库初始化成功
+[2025-05-04 11:12:11] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:12:11] INFO: 数据库初始化成功
+[2025-05-04 11:12:56] ERROR: 认证失败: invalid signature
+[2025-05-04 11:12:58] ERROR: 认证失败: invalid signature
+[2025-05-04 11:13:20] ERROR: 认证失败: invalid signature
+[2025-05-04 11:17:35] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:17:35] INFO: 数据库初始化成功
+[2025-05-04 11:17:56] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:17:56] INFO: 数据库初始化成功
+[2025-05-04 11:18:05] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:18:05] INFO: 数据库初始化成功
+[2025-05-04 11:18:24] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:18:24] INFO: 数据库初始化成功
+[2025-05-04 11:18:46] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:18:46] INFO: 数据库初始化成功
+[2025-05-04 11:21:17] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:21:17] INFO: 数据库初始化成功
+[2025-05-04 11:21:47] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarylABamjHrvYlvlusm","file":"存在"}
+[2025-05-04 11:21:47] INFO: 文件上传成功: test.xlsx, 大小: 8558 字节
+[2025-05-04 11:21:54] INFO: 成功解析课程表，共2门课程
+[2025-05-04 11:23:46] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryRinntKiZ2IMfqclK","file":"存在"}
+[2025-05-04 11:23:46] INFO: 文件上传成功: test.xlsx, 大小: 8558 字节
+[2025-05-04 11:23:52] INFO: 成功解析课程表，共2门课程
+[2025-05-04 11:39:58] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryKabHDEnAmUnI2T35","file":"存在"}
+[2025-05-04 11:39:58] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 14848 字节
+[2025-05-04 11:40:38] INFO: 成功解析课程表，共15门课程
+[2025-05-04 11:44:58] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:44:58] INFO: 数据库初始化成功
+[2025-05-04 11:52:56] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:52:56] INFO: 数据库初始化成功
+[2025-05-04 11:54:05] INFO: 服务器运行在 http://localhost:3000
+[2025-05-04 11:54:05] INFO: 数据库初始化成功
+[2025-05-04 11:54:32] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarysrwLUPTyp0MNn38F","file":"存在"}
+[2025-05-04 11:54:32] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 14848 字节
+[2025-05-04 11:55:12] INFO: 成功解析课程表，共15门课程
+[2025-05-04 11:57:50] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryxCfvpIfOsfuCxKy5","file":"存在"}
+[2025-05-04 11:57:50] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-04 11:58:31] INFO: 成功解析课程表，共15门课程
+[2025-05-06 16:59:01] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 16:59:01] INFO: 数据库初始化成功
+[2025-05-06 16:59:55] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryk5WcJVBk1qHzJKuS","file":"存在"}
+[2025-05-06 16:59:55] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 17:00:07] INFO: 成功解析课程表，共undefined门课程
+[2025-05-06 17:03:11] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundary3BauAIoBbRcp07dL","file":"存在"}
+[2025-05-06 17:03:11] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 17:03:23] INFO: 成功解析课程表，共undefined门课程
+[2025-05-06 17:06:13] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryWELyAjQg7lyDv01B","file":"存在"}
+[2025-05-06 17:06:13] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 17:06:22] INFO: 成功解析课程表，共11门课程
+[2025-05-06 19:05:21] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 19:05:21] INFO: 数据库初始化成功
+[2025-05-06 20:12:08] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 20:12:08] INFO: 数据库初始化成功
+[2025-05-06 20:12:41] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryRQw0P7XsLsBBuhCB","file":"存在"}
+[2025-05-06 20:12:41] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 20:12:52] INFO: 成功解析课程表，共undefined门课程
+[2025-05-06 20:13:13] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarysOBYuHjNoprBTBIc","file":"存在"}
+[2025-05-06 20:13:13] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 20:13:22] INFO: 成功解析课程表，共11门课程
+[2025-05-06 20:17:34] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 20:17:34] INFO: 数据库初始化成功
+[2025-05-06 20:55:37] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 20:55:37] INFO: 数据库初始化成功
+[2025-05-06 20:56:07] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundary8fV4vkaWLkljFHE8","file":"存在"}
+[2025-05-06 20:56:07] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 20:56:18] INFO: 成功解析课程表，共undefined门课程
+[2025-05-06 20:56:27] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryXSkE23uAMp0XV0J5","file":"存在"}
+[2025-05-06 20:56:27] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 20:56:39] INFO: 成功解析课程表，共undefined门课程
+[2025-05-06 20:57:28] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryS1e0ECpWoI4A9ZR4","file":"存在"}
+[2025-05-06 20:57:28] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 20:57:41] INFO: 成功解析课程表，共undefined门课程
+[2025-05-06 20:59:42] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryHy9k3Z59AYvBzTw9","file":"存在"}
+[2025-05-06 20:59:42] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 20:59:54] INFO: 成功解析课程表，共undefined门课程
+[2025-05-06 21:04:15] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 21:04:15] INFO: 数据库初始化成功
+[2025-05-06 21:04:30] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryzonFrJZObzubtecg","file":"存在"}
+[2025-05-06 21:04:30] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 21:04:43] INFO: 成功解析课程表，共undefined门课程
+[2025-05-06 21:05:00] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarytVT6qRJUuexJ7fMl","file":"存在"}
+[2025-05-06 21:05:00] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 21:05:13] INFO: 成功解析课程表，共undefined门课程
+[2025-05-06 21:09:32] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 21:09:32] INFO: 数据库初始化成功
+[2025-05-06 21:09:39] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 21:09:39] INFO: 数据库初始化成功
+[2025-05-06 21:10:10] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 21:10:10] INFO: 数据库初始化成功
+[2025-05-06 21:10:23] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryyuLwGsjr2jGEASGq","file":"存在"}
+[2025-05-06 21:10:23] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 21:10:41] INFO: 成功解析课程表，共11门课程
+[2025-05-06 21:25:18] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryFEqtcNI4NEp511JC","file":"存在"}
+[2025-05-06 21:25:18] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 21:25:35] INFO: 成功解析课程表，共11门课程
+[2025-05-06 21:32:37] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 21:32:37] INFO: 数据库初始化成功
+[2025-05-06 21:32:52] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryuXgBUnAfkwKHADII","file":"存在"}
+[2025-05-06 21:32:52] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 21:33:09] INFO: 成功解析课程表，共11门课程
+[2025-05-06 21:33:17] ERROR: 解析Deepseek返回的JSON失败: Unexpected token '准', "[准]" is not valid JSON
+[2025-05-06 21:33:17] ERROR: Deepseek API调用失败: 无法解析搜索结果，请稍后重试
+[2025-05-06 21:39:35] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 21:39:35] INFO: 数据库初始化成功
+[2025-05-06 21:39:49] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryTp8ei9j4VMHNeQHu","file":"存在"}
+[2025-05-06 21:39:49] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 21:40:04] INFO: 成功解析课程表，共11门课程
+[2025-05-06 21:40:37] ERROR: 解析Deepseek返回的JSON失败: courses.map is not a function
+[2025-05-06 21:40:37] ERROR: Deepseek API调用失败: 无法解析搜索结果，请稍后重试
+[2025-05-06 21:42:41] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 21:42:41] INFO: 数据库初始化成功
+[2025-05-06 21:43:00] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryfDKxCxKasNEVNfVC","file":"存在"}
+[2025-05-06 21:43:00] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 21:43:16] INFO: 成功解析课程表，共11门课程
+[2025-05-06 21:43:47] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "【数据结构】浙江大学-数据结构（全）",
+        "video_url": "https://www.bilibili.com/video/BV1JW411i731",
+        "uploader": "浙江大学"
+    },
+    {
+        "title": "数据结构与算法基础（青岛大学-王卓）"...
+[2025-05-06 21:43:47] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-06 21:44:40] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "数据结构与算法基础（青岛大学-王卓）",
+        "video_url": "https://www.bilibili.com/video/BV1nJ411V7bd",
+        "uploader": "青岛大学王卓"
+    },
+    {
+        "title": "【浙江大学】数据结构（全）",
+ ...
+[2025-05-06 21:44:40] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-06 21:46:22] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarycLjEJSlPPR7WT961","file":"存在"}
+[2025-05-06 21:46:22] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 21:46:40] INFO: 成功解析课程表，共11门课程
+[2025-05-06 21:47:16] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "数据结构与算法基础（青岛大学-王卓）",
+        "video_url": "https://www.bilibili.com/video/BV1nJ411V7bd",
+        "uploader": "青岛大学王卓"
+    },
+    {
+        "title": "【浙江大学】数据结构（全）",
+ ...
+[2025-05-06 21:47:16] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-06 21:59:24] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "【浙江大学】数据结构（全）",
+        "video_url": "https://www.bilibili.com/video/BV1JW411i731",
+        "uploader": "浙江大学计算机科学与技术学院"
+    },
+    {
+        "title": "【浙江大学】数据结构与算法（...
+[2025-05-06 21:59:24] INFO: 成功搜索B站课程，关键词"【浙江大学】数据结构（全）"，共10个结果
+[2025-05-06 22:04:49] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryCI3623qRIo7sw2IS","file":"存在"}
+[2025-05-06 22:04:49] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 22:05:09] INFO: 成功解析课程表，共11门课程
+[2025-05-06 22:05:52] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "【微积分II】同济七版下册精讲（高等数学）",
+        "video_url": "https://www.bilibili.com/video/BV1aE411W7h3",
+        "uploader": "宋浩老师官方"
+    },
+    {
+        "title": "微积分II（下）重积分/曲线...
+[2025-05-06 22:05:52] INFO: 成功搜索B站课程，关键词"微积分II"，共10个结果
+[2025-05-06 22:06:49] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryvyBzAJqLrSHgj1BF","file":"存在"}
+[2025-05-06 22:06:49] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 22:07:05] INFO: 成功解析课程表，共11门课程
+[2025-05-06 22:08:00] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "数据结构与算法基础（青岛大学-王卓）",
+        "video_url": "https://www.bilibili.com/video/BV1nJ411V7bd",
+        "uploader": "青岛大学-王卓"
+    },
+    {
+        "title": "数据结构-浙江大学（陈越、何钦铭...
+[2025-05-06 22:08:00] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-06 22:09:08] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "【数据结构】清华大学-严蔚敏（全）",
+        "video_url": "https://www.bilibili.com/video/BV1sW41177oX",
+        "uploader": "计算机科学教育"
+    },
+    {
+        "title": "数据结构与算法基础（青岛大学-王卓...
+[2025-05-06 22:09:08] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-06 22:11:59] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryfuJ1mycQxTWVoKZ6","file":"存在"}
+[2025-05-06 22:11:59] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 22:12:14] INFO: 成功解析课程表，共11门课程
+[2025-05-06 22:12:51] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "数据结构与算法基础（青岛大学-王卓）",
+        "video_url": "https://www.bilibili.com/video/BV1nJ411V7bd",
+        "uploader": "青岛大学王卓"
+    },
+    {
+        "title": "【浙江大学】数据结构-陈越",
+ ...
+[2025-05-06 22:12:51] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-06 22:17:10] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryNNnvUuBKZWygp0FG","file":"存在"}
+[2025-05-06 22:17:10] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 22:17:28] INFO: 成功解析课程表，共11门课程
+[2025-05-06 22:18:06] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "【数据结构】浙江大学-数据结构（全）",
+        "video_url": "https://www.bilibili.com/video/BV1JW411i731",
+        "uploader": "爱学习的饲养员"
+    },
+    {
+        "title": "数据结构与算法基础（青岛大学-王...
+[2025-05-06 22:18:06] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-06 22:19:53] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 22:19:53] INFO: 数据库初始化成功
+[2025-05-06 22:20:20] INFO: 服务器运行在 http://localhost:3000
+[2025-05-06 22:20:20] INFO: 数据库初始化成功
+[2025-05-06 22:20:38] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundary0xiNW8a1SMDNvyfN","file":"存在"}
+[2025-05-06 22:20:38] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-06 22:20:53] INFO: 成功解析课程表，共11门课程
+[2025-05-06 22:22:39] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "【数据结构】清华大学-邓俊辉（完）",
+        "video_url": "https://www.bilibili.com/video/BV1jt4y117a4",
+        "uploader": "计算机科学公开课"
+    },
+    {
+        "title": "数据结构与算法基础（青岛大学-王...
+[2025-05-06 22:22:39] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-06 22:26:05] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "【微积分II】完整课程 - 高等数学（下）",
+        "video_url": "https://www.bilibili.com/video/BV1XW411Y7Z4",
+        "uploader": "宋浩老师官方"
+    },
+    {
+        "title": "微积分II（高等数学下）全集...
+[2025-05-06 22:26:05] INFO: 成功搜索B站课程，关键词"微积分II"，共10个结果
+[2025-05-07 22:19:52] INFO: 服务器运行在 http://localhost:3000
+[2025-05-07 22:19:52] INFO: 数据库初始化成功
+[2025-05-07 22:20:15] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryBnhwVrUnYGzHJ5Gl","file":"存在"}
+[2025-05-07 22:20:15] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-07 22:20:29] INFO: 成功解析课程表，共11门课程
+[2025-05-07 22:21:03] INFO: Deepseek返回内容: ```json
+[
+    {
+        "title": "【数据结构】浙江大学-数据结构（全）",
+        "video_url": "https://www.bilibili.com/video/BV1JW411i731",
+        "uploader": "浙江大学"
+    },
+    {
+        "title": "数据结构与算法基础（青岛大学-王卓）"...
+[2025-05-07 22:21:03] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-07 22:32:52] INFO: 服务器运行在 http://localhost:3000
+[2025-05-07 22:32:52] INFO: 数据库初始化成功
+[2025-05-12 15:52:37] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 15:52:38] INFO: 数据库初始化成功
+[2025-05-12 15:59:49] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryxp2RC9eR1sJQvHfa","file":"存在"}
+[2025-05-12 15:59:49] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 15:59:49] ERROR: Deepseek API调用失败: True is not defined
+[2025-05-12 15:59:49] ERROR: 文件解析失败: 课程表解析失败，请稍后重试
+[2025-05-12 15:59:49] ERROR: 处理课程表上传失败: 课程表解析失败，请稍后重试
+[2025-05-12 15:59:49] ERROR: Error: 课程表解析失败，请稍后重试
+    at parseCourseSchedule (E:\Workspace\courser\courser_back\services\deepseekService.js:72:11)
+    at parseFile (E:\Workspace\courser\courser_back\services\fileParserService.js:121:20)
+    at async E:\Workspace\courser\courser_back\index.js:121:27
+[2025-05-12 16:03:24] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 16:03:24] INFO: 数据库初始化成功
+[2025-05-12 16:03:27] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 16:03:27] INFO: 数据库初始化成功
+[2025-05-12 16:03:55] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryeXJvQumIXYrGKpkW","file":"存在"}
+[2025-05-12 16:03:55] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 16:04:21] INFO: 成功解析课程表，共11门课程
+[2025-05-12 16:04:24] ERROR: Deepseek API调用失败: True is not defined
+[2025-05-12 16:05:28] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 16:05:28] INFO: 数据库初始化成功
+[2025-05-12 16:05:41] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 16:05:41] INFO: 数据库初始化成功
+[2025-05-12 16:05:53] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryNDutBeV2o73O9IGM","file":"存在"}
+[2025-05-12 16:05:53] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 16:06:09] INFO: 成功解析课程表，共11门课程
+[2025-05-12 16:06:55] INFO: Deepseek返回内容: [
+  {
+    "title": "数据结构与算法基础教程",
+    "video_url": "https://www.bilibili.com/video/BV1ZJ411z7fr",
+    "uploader": "麻省理工学院公开课"
+  },
+  {
+    "title": "【2023】数据结构与算法全集 | C语言实现 | 数据结构入门到精通",
+    "video_ur...
+[2025-05-12 16:06:55] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-12 16:11:32] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 16:11:32] INFO: 数据库初始化成功
+[2025-05-12 16:11:42] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 16:11:42] INFO: 数据库初始化成功
+[2025-05-12 16:11:55] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryAb2X0z9Bp4mGgVJT","file":"存在"}
+[2025-05-12 16:11:55] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 16:12:13] INFO: 成功解析课程表，共11门课程
+[2025-05-12 16:12:33] INFO: Deepseek返回内容: [
+    {"title":"数据结构与算法 - 从入门到精通","video_url":"https://www.bilibili.com/video/BV1234567890","uploader":"编程小课堂"},
+    {"title":"【超清晰】数据结构基础教程（C语言版）","video_url":"https://www.bilibili.com/video/BV234567...
+[2025-05-12 16:12:33] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-12 16:13:47] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryWXnI0iJBcHLHGAnY","file":"存在"}
+[2025-05-12 16:13:47] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 16:13:57] INFO: 成功解析课程表，共11门课程
+[2025-05-12 16:14:22] INFO: Deepseek返回内容: [
+    {"title":"数据结构与算法 - 从入门到精通","video_url":"https://www.bilibili.com/video/BV1XW411o7mo","uploader":"小甲鱼"},
+    {"title":"数据结构入门（C语言实现）","video_url":"https://www.bilibili.com/video/BV1zt411Z76B","u...
+[2025-05-12 16:14:22] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-12 16:16:34] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 16:16:34] INFO: 数据库初始化成功
+[2025-05-12 16:16:35] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 16:16:35] INFO: 数据库初始化成功
+[2025-05-12 16:16:37] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 16:16:37] INFO: 数据库初始化成功
+[2025-05-12 16:16:45] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 16:16:45] INFO: 数据库初始化成功
+[2025-05-12 16:17:11] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryeCHoxhjM0AbB0r16","file":"存在"}
+[2025-05-12 16:17:11] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 16:17:42] INFO: 成功解析课程表，共11门课程
+[2025-05-12 16:18:02] INFO: Deepseek返回内容: [
+    {"title":"数据结构与算法 - 全面讲解","video_url":"https://www.bilibili.com/video/BV1X7411F7gk","uploader":"极客教程"},
+    {"title":"数据结构入门到精通","video_url":"https://www.bilibili.com/video/BV1Y7411n7Mz","upload...
+[2025-05-12 16:18:02] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-12 16:18:41] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 16:18:41] INFO: 数据库初始化成功
+[2025-05-12 16:18:54] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryXJB6yOr2w3401MOc","file":"存在"}
+[2025-05-12 16:18:54] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 16:19:12] INFO: 成功解析课程表，共11门课程
+[2025-05-12 16:19:35] INFO: Deepseek返回内容: [
+    {"title":"数据结构与算法 - 从入门到精通","video_url":"https://www.bilibili.com/video/BV1ZK411u7hJ","uploader":"极客教程"},
+    {"title":"数据结构基础课程 - 完整版","video_url":"https://www.bilibili.com/video/BV18x411q7L3",...
+[2025-05-12 16:19:35] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-12 17:31:41] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 17:31:41] INFO: 数据库初始化成功
+[2025-05-12 17:31:50] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryJhDdjEd6TO2xyBgA","file":"存在"}
+[2025-05-12 17:31:50] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 17:32:09] INFO: 成功解析课程表，共11门课程
+[2025-05-12 17:32:40] INFO: Deepseek返回内容: [{"title":"数据结构与算法从入门到精通（C++版）","video_url":"https://www.bilibili.com/video/BV1zt411u7YR","uploader":"代码随想录"},{"title":"数据结构与算法分析（Java版）","video_url":"https://www.bilibili.com/video/BV19E411G76T","upl...
+[2025-05-12 17:32:40] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-12 17:32:49] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 17:32:49] INFO: 数据库初始化成功
+[2025-05-12 17:33:12] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 17:33:12] INFO: 数据库初始化成功
+[2025-05-12 17:33:25] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryTNsENrVfsq9JcbUZ","file":"存在"}
+[2025-05-12 17:33:25] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 17:33:40] INFO: 成功解析课程表，共11门课程
+[2025-05-12 17:33:58] INFO: Deepseek返回内容: [{"title":"数据结构与算法-清华邓俊辉","video_url":"https://www.bilibili.com/video/BV1Ys411d7qj","uploader":"清华大学出版社"}, {"title":"数据结构（C语言版）_严蔚敏_慕课版","video_url":"https://www.bilibili.com/video/BV1zt411u7X3","uplo...
+[2025-05-12 17:33:58] INFO: 成功搜索B站课程，关键词"数据结构"，共10个结果
+[2025-05-12 18:11:25] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 18:11:25] INFO: 数据库初始化成功
+[2025-05-12 18:11:37] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryO5tdmbmEuzwjpOBe","file":"存在"}
+[2025-05-12 18:11:37] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 18:11:57] INFO: 成功解析课程表，共11门课程
+[2025-05-12 18:19:14] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 18:19:14] INFO: 数据库初始化成功
+[2025-05-12 18:19:30] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryIeLZsPKsFi6GiGAV","file":"存在"}
+[2025-05-12 18:19:30] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 18:19:46] INFO: 成功解析课程表，共11门课程
+[2025-05-12 18:32:10] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 18:32:10] INFO: 数据库初始化成功
+[2025-05-12 18:48:21] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 18:48:21] INFO: 数据库初始化成功
+[2025-05-12 18:48:50] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryGyOrtC3azTv9nZL4","file":"存在"}
+[2025-05-12 18:48:50] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 18:49:08] INFO: 成功解析课程表，共11门课程
+[2025-05-12 18:53:15] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 18:53:15] INFO: 数据库初始化成功
+[2025-05-12 18:53:28] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryDby5na1It5I4ZkE4","file":"存在"}
+[2025-05-12 18:53:28] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 18:53:42] INFO: 成功解析课程表，共11门课程
+[2025-05-12 18:55:22] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 18:55:23] INFO: 数据库初始化成功
+[2025-05-12 18:55:36] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryijikaIugtMjF8SvZ","file":"存在"}
+[2025-05-12 18:55:36] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 18:55:51] INFO: 成功解析课程表，共11门课程
+[2025-05-12 19:47:22] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 19:47:22] INFO: 数据库初始化成功
+[2025-05-12 19:47:36] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryq79SyxdQDEHDTGOM","file":"存在"}
+[2025-05-12 19:47:36] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 19:47:50] INFO: 成功解析课程表，共11门课程
+[2025-05-12 19:59:25] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 19:59:25] INFO: 数据库初始化成功
+[2025-05-12 20:04:58] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 20:04:58] INFO: 数据库初始化成功
+[2025-05-12 20:09:17] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 20:09:17] INFO: 数据库初始化成功
+[2025-05-12 20:09:26] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryPvTMAyfSB0hOhgt3","file":"存在"}
+[2025-05-12 20:09:26] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 20:09:34] INFO: 成功解析课程表，共11门课程
+[2025-05-12 22:23:42] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 22:23:42] INFO: 数据库初始化成功
+[2025-05-12 22:23:53] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 22:23:53] INFO: 数据库初始化成功
+[2025-05-12 22:31:06] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 22:31:06] INFO: 数据库初始化成功
+[2025-05-12 22:31:15] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 22:31:15] INFO: 数据库初始化成功
+[2025-05-12 22:31:31] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryBMfLsnruT5sxszRO","file":"存在"}
+[2025-05-12 22:31:31] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 22:31:43] INFO: 成功解析课程表，共11门课程
+[2025-05-12 22:34:31] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundary1YxRtvew6I24AfZ1","file":"存在"}
+[2025-05-12 22:34:31] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 22:34:51] INFO: 成功解析课程表，共11门课程
+[2025-05-12 22:46:36] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 22:46:36] INFO: 数据库初始化成功
+[2025-05-12 22:46:50] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarys7OpzldfsZq8gvWg","file":"存在"}
+[2025-05-12 22:46:50] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 22:47:06] INFO: 成功解析课程表，共11门课程
+[2025-05-12 22:58:02] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 22:58:02] INFO: 数据库初始化成功
+[2025-05-12 22:58:14] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundary2rGfkSxOT5fe06Z8","file":"存在"}
+[2025-05-12 22:58:14] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 22:58:26] INFO: 成功解析课程表，共11门课程
+[2025-05-12 23:03:39] INFO: 服务器运行在 http://localhost:3000
+[2025-05-12 23:03:39] INFO: 数据库初始化成功
+[2025-05-12 23:03:47] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarytLBCrTBnyrzM8rwU","file":"存在"}
+[2025-05-12 23:03:47] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 23:03:59] INFO: 成功解析课程表，共11门课程
+[2025-05-12 23:05:58] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarytAOuL0QcyBRAl9RX","file":"存在"}
+[2025-05-12 23:05:58] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 23:06:12] INFO: 成功解析课程表，共11门课程
+[2025-05-12 23:07:27] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryin8fFrZBRJoIbVu8","file":"存在"}
+[2025-05-12 23:07:27] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 23:07:40] INFO: 成功解析课程表，共11门课程
+[2025-05-12 23:08:32] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundary3tf3epQDBEZ9Op0E","file":"存在"}
+[2025-05-12 23:08:32] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-12 23:08:49] INFO: 成功解析课程表，共11门课程
+[2025-05-13 11:01:22] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 11:01:22] INFO: 数据库初始化成功
+[2025-05-13 11:01:54] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundary5E4oeL6HJsxsN5DV","file":"存在"}
+[2025-05-13 11:01:54] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 11:02:12] INFO: 成功解析课程表，共11门课程
+[2025-05-13 11:04:45] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarylEuprFA3DhtJXD4t","file":"存在"}
+[2025-05-13 11:04:45] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 11:04:58] INFO: 成功解析课程表，共11门课程
+[2025-05-13 11:14:46] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 11:14:46] INFO: 数据库初始化成功
+[2025-05-13 11:14:51] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 11:14:51] INFO: 数据库初始化成功
+[2025-05-13 11:19:13] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 11:19:13] INFO: 数据库初始化成功
+[2025-05-13 11:21:36] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundary89Ygxhh0Q46vvyP6","file":"存在"}
+[2025-05-13 11:21:36] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 11:21:57] INFO: 成功解析课程表，共11门课程
+[2025-05-13 11:23:50] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryaQ0mTI2D7Tj4bBxW","file":"存在"}
+[2025-05-13 11:23:50] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 11:24:09] INFO: 成功解析课程表，共11门课程
+[2025-05-13 14:06:50] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 14:06:50] INFO: 数据库初始化成功
+[2025-05-13 14:07:02] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarydL4lPozTjSDjJ6Bk","file":"存在"}
+[2025-05-13 14:07:02] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 14:07:21] INFO: 成功解析课程表，共11门课程
+[2025-05-13 14:08:12] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 14:08:12] INFO: 数据库初始化成功
+[2025-05-13 14:08:55] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 14:08:55] INFO: 数据库初始化成功
+[2025-05-13 14:09:04] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryetnDDHl1pudfM4RD","file":"存在"}
+[2025-05-13 14:09:04] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 14:09:20] INFO: 成功解析课程表，共11门课程
+[2025-05-13 14:10:05] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryBxQ5FgL4f6rcYeSk","file":"存在"}
+[2025-05-13 14:10:05] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 14:10:20] INFO: 成功解析课程表，共11门课程
+[2025-05-13 14:15:55] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 14:15:55] INFO: 数据库初始化成功
+[2025-05-13 14:16:05] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundary5mIH7PSFBBZsYzmi","file":"存在"}
+[2025-05-13 14:16:05] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 14:16:20] INFO: 成功解析课程表，共11门课程
+[2025-05-13 14:17:16] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryRq1yl0wl0tWEUL8b","file":"存在"}
+[2025-05-13 14:17:16] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 14:17:46] INFO: 成功解析课程表，共11门课程
+[2025-05-13 14:19:34] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 14:19:34] INFO: 数据库初始化成功
+[2025-05-13 14:19:46] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarymIAJryP6cc4VAEvH","file":"存在"}
+[2025-05-13 14:19:46] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 14:20:11] INFO: 成功解析课程表，共11门课程
+[2025-05-13 14:26:54] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 14:26:54] INFO: 数据库初始化成功
+[2025-05-13 14:27:55] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundary2rlG5Z49MQzoeO8G","file":"存在"}
+[2025-05-13 14:27:55] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 14:28:08] INFO: 成功解析课程表，共11门课程
+[2025-05-13 14:31:28] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryBNl9PhAzY5xmRXWH","file":"存在"}
+[2025-05-13 14:31:28] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 14:31:47] INFO: 成功解析课程表，共11门课程
+[2025-05-13 14:51:31] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 14:51:31] INFO: 数据库初始化成功
+[2025-05-13 14:54:45] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarynfgBxhn8yhyoMxia","file":"存在"}
+[2025-05-13 14:54:45] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-13 14:55:04] INFO: 成功解析课程表，共11门课程
+[2025-05-13 14:57:52] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 14:57:52] INFO: 数据库初始化成功
+[2025-05-13 14:59:01] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 14:59:01] INFO: 数据库初始化成功
+[2025-05-13 14:59:19] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 14:59:19] INFO: 数据库初始化成功
+[2025-05-13 15:00:10] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 15:00:10] INFO: 数据库初始化成功
+[2025-05-13 15:12:14] INFO: 服务器运行在 http://localhost:3000
+[2025-05-13 15:12:14] INFO: 数据库初始化成功
+[2025-05-14 15:05:25] INFO: 服务器运行在 http://localhost:3000
+[2025-05-14 15:05:25] INFO: 数据库初始化成功
+[2025-05-14 15:05:35] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryOwQ6hd1gcg8Uzn6X","file":"存在"}
+[2025-05-14 15:05:35] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-05-14 15:05:54] INFO: 成功解析课程表，共11门课程
+[2025-05-14 15:18:51] INFO: 服务器运行在 http://localhost:3000
+[2025-05-14 15:18:51] INFO: 数据库初始化成功
+[2025-05-14 15:20:51] INFO: 服务器运行在 http://localhost:3000
+[2025-05-14 15:20:51] INFO: 数据库初始化成功

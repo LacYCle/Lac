@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>Courser - 在线网课学习平台</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS引用 -->
+<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#">Courser</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">课程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#favorites">收藏</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 mr-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="搜索课程..." id="searchInput">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-primary" type="button" id="searchButton">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!-- 未登录状态 -->
+                <div class="auth-buttons" id="authButtons">
+                    <button class="btn btn-outline-primary mr-2" data-toggle="modal" data-target="#loginModal">登录</button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#registerModal">注册</button>
+                </div>
+                <!-- 已登录状态 -->
+                <div class="user-profile d-none" id="userProfile">
+                    <div class="dropdown">
+                        <button class="btn btn-link dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown">
+                            <i class="fas fa-user-circle fa-lg mr-1"></i>
+                            <span id="username">用户名</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#" id="uploadSchedule">
+                                <i class="fas fa-upload mr-2"></i>上传课程表
+                            </a>
+                            <a class="dropdown-item" href="#" id="settingsButton">
+                                <i class="fas fa-cog mr-2"></i>设置
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" id="logoutButton">
+                                <i class="fas fa-sign-out-alt mr-2"></i>退出登录
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main>
+        <!-- 欢迎区域 -->
+        <section class="hero-section text-center" id="hero">
+            <div class="container">
+                <h1 class="display-4 font-weight-bold">欢迎使用 Courser</h1>
+                <p class="lead mb-4">您的个性化在线学习平台，随时随地学习优质课程</p>
+                <button class="btn btn-primary btn-lg px-4 mr-2" data-toggle="modal" data-target="#registerModal">
+                    立即开始 <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <button class="btn btn-outline-secondary btn-lg px-4" href="#courses">
+                    浏览课程 <i class="fas fa-th-list ml-2"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- 推荐课程区域 -->
+        <section class="py-5" id="courses">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="section-title">推荐课程</h2>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="courseFilterDropdown" data-toggle="dropdown">
+                            筛选 <i class="fas fa-filter ml-1"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">全部课程</a>
+                            <a class="dropdown-item" href="#">最新上线</a>
+                            <a class="dropdown-item" href="#">最受欢迎</a>
+                            <a class="dropdown-item" href="#">已观看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="coursesList">
+                    <!-- 课程卡片将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 收藏课程区域 -->
+        <section class="py-5 bg-light" id="favorites">
+            <div class="container">
+                <h2 class="section-title mb-4">我的收藏</h2>
+                <div class="row" id="favoritesList">
+                    <!-- 收藏课程将通过JavaScript动态生成 -->
+                    <div class="col-12 text-center py-5" id="emptyFavorites">
+                        <i class="fas fa-heart text-muted mb-3" style="font-size: 3rem;"></i>
+                        <h4 class="text-muted">您还没有收藏任何课程</h4>
+                        <p>浏览推荐课程并添加到收藏夹</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer mt-auto py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Courser</h5>
+                    <p class="text-muted">您的个性化在线学习平台</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>链接</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">关于我们</a></li>
+                        <li><a href="#" class="text-white-50">联系我们</a></li>
+                        <li><a href="#" class="text-white-50">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>关注我们</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white-50 mr-3"><i class="fab fa-weixin fa-lg"></i></a>
+                        <a href="#" class="text-white-50 mr-3"><i class="fab fa-weibo fa-lg"></i></a>
+                        <a href="#" class="text-white-50"><i class="fab fa-qq fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="text-muted mb-0">© 2023 Courser. 保留所有权利。</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 登录模态框 -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">登录</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">邮箱</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">密码</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">记住我</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">登录</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">忘记密码？</a>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <p class="mb-0">还没有账号？ <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">立即注册</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 注册模态框 -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">注册</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label for="registerUsername">用户名</label>
+                            <input type="text" class="form-control" id="registerUsername" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerEmail">邮箱</label>
+                            <input type="email" class="form-control" id="registerEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword">密码</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">确认密码</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">我同意<a href="#">服务条款</a>和<a href="#">隐私政策</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">注册</button>
+                    </form>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <p class="mb-0">已有账号？ <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">登录</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 上传课程表模态框 -->
+    <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">上传课程表</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="uploadForm">
+                        <div class="form-group">
+                            <label for="scheduleFile">选择文件</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="scheduleFile" accept=".csv,.xls,.xlsx">
+                                <label class="custom-file-label" for="scheduleFile">选择文件...</label>
+                            </div>
+                            <small class="form-text text-muted">支持 CSV、Excel 格式</small>
+                        </div>
+                        <div class="form-group">
+                            <label>预览</label>
+                            <div class="border rounded p-3 bg-light" id="filePreview">
+                                <p class="text-center text-muted mb-0">上传文件后显示预览</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="confirmUpload">上传</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 视频播放模态框 -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoTitle">视频标题</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video id="videoPlayer" class="embed-responsive-item" controls>
+                            <source src="" type="video/mp4">
+                            您的浏览器不支持 HTML5 视频。
+                        </video>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <div>
+                        <button type="button" class="btn btn-outline-primary mr-2" id="favoriteButton">
+                            <i class="far fa-heart"></i> 收藏
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary" id="markWatchedButton">
+                            <i class="far fa-check-circle"></i> 标记为已观看
+                        </button>
+                    </div>
+                    <div>
+                        <div class="dropdown d-inline-block">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="playbackSpeedDropdown" data-toggle="dropdown">
+                                <i class="fas fa-tachometer-alt"></i> 播放速度
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#">0.5x</a>
+                                <a class="dropdown-item" href="#">1.0x</a>
+                                <a class="dropdown-item" href="#">1.5x</a>
+                                <a class="dropdown-item" href="#">2.0x</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 设置模态框 -->
+    <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">设置</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="settingsForm">
+                        <h6 class="font-weight-bold mb-3">视频设置</h6>
+                        <div class="form-group">
+                            <label for="defaultQuality">默认画质</label>
+                            <select class="form-control" id="defaultQuality">
+                                <option value="1080">高清 (1080p)</option>
+                                <option value="720" selected>标清 (720p)</option>
+                                <option value="480">流畅 (480p)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="defaultSpeed">默认播放速度</label>
+                            <select class="form-control" id="defaultSpeed">
+                                <option value="0.5">0.5x</option>
+                                <option value="1.0" selected>1.0x</option>
+                                <option value="1.5">1.5x</option>
+                                <option value="2.0">2.0x</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="volumeLevel">默认音量</label>
+                            <input type="range" class="custom-range" min="0" max="100" value="80" id="volumeLevel">
+                            <div class="d-flex justify-content-between">
+                                <small>0%</small>
+                                <small id="volumeValue">80%</small>
+                                <small>100%</small>
+                            </div>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="autoplay" checked>
+                            <label class="form-check-label" for="autoplay">自动播放视频</label>
+                        </div>
+                        <hr>
+                        <h6 class="font-weight-bold mb-3">界面设置</h6>
+                        <div class="form-group">
+                            <label>主题</label>
+                            <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
+                                <label class="btn btn-outline-primary active">
+                                    <input type="radio" name="theme" id="lightTheme" checked> 浅色
+                                </label>
+                                <label class="btn btn-outline-primary">
+                                    <input type="radio" name="theme" id="darkTheme"> 深色
+                                </label>
+                                <label class="btn btn-outline-primary">
+                                    <input type="radio" name="theme" id="systemTheme"> 跟随系统
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="saveSettings">保存设置</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript引用 -->
+    <script src="libs/jquery/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.js"></script>
+    
+    <!-- 自定义JS -->
+    <!-- 在其他脚本之前引入API服务 -->
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/courses.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>
