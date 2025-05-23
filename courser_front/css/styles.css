@@ -397,3 +397,9 @@ body {
     justify-content: space-between;
     margin-top: auto;
 }
+
+/* 添加淡出动画效果 */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
