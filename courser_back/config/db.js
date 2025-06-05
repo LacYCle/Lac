@@ -88,38 +88,6 @@ async function initDatabase() {
       )
     `);
     
-    // 创建观看历史表
-    await pool.query(`
-      CREATE TABLE IF NOT EXISTS watch_history (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        user_id INT NOT NULL,
-        course_id INT NOT NULL,
-        progress INT DEFAULT 0,
-        watched BOOLEAN DEFAULT FALSE,
-        last_position INT DEFAULT 0,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-        FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE,
-        UNIQUE KEY user_course (user_id, course_id)
-      )
-    `);
-    
-    // 创建用户设置表
-    await pool.query(`
-      CREATE TABLE IF NOT EXISTS user_settings (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        user_id INT NOT NULL UNIQUE,
-        default_quality VARCHAR(10) DEFAULT '720',
-        default_speed VARCHAR(10) DEFAULT '1.0',
-        volume_level INT DEFAULT 80,
-        autoplay BOOLEAN DEFAULT TRUE,
-        theme VARCHAR(20) DEFAULT 'light',
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-      )
-    `);
     
     console.log('数据库初始化成功');
     return true;
