@@ -674,3 +674,23 @@
 [2025-06-05 20:49:08] INFO: 数据库初始化成功
 [2025-06-05 21:26:06] INFO: 服务器运行在 http://localhost:3000
 [2025-06-05 21:26:06] INFO: 数据库初始化成功
+[2025-06-05 22:04:02] INFO: 服务器运行在 http://localhost:3000
+[2025-06-05 22:04:02] INFO: 数据库初始化成功
+[2025-06-05 22:08:01] INFO: 服务器运行在 http://localhost:3000
+[2025-06-05 22:08:01] INFO: 数据库初始化成功
+[2025-06-05 22:08:03] INFO: 服务器运行在 http://localhost:3000
+[2025-06-05 22:08:03] INFO: 数据库初始化成功
+[2025-06-08 13:59:29] INFO: 服务器运行在 http://localhost:3000
+[2025-06-08 13:59:29] INFO: 数据库初始化成功
+[2025-06-08 14:00:51] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryLEoFEFuJGKmCNBBV","file":"存在"}
+[2025-06-08 14:00:51] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-06-08 14:01:16] INFO: 成功解析课程表，共11门课程
+[2025-06-08 14:07:42] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundarybzfnnwjOqxKdSXcn","file":"存在"}
+[2025-06-08 14:07:42] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-06-08 14:07:59] INFO: 成功解析课程表，共11门课程
+[2025-06-08 14:36:14] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryyhPi997RFgA3xWpH","file":"存在"}
+[2025-06-08 14:36:14] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-06-08 14:36:33] INFO: 成功解析课程表，共11门课程
+[2025-06-08 14:59:52] INFO: 收到文件上传请求: {"headers":"multipart/form-data; boundary=----WebKitFormBoundaryP02ZVNvobKLpLYIA","file":"存在"}
+[2025-06-08 14:59:52] INFO: 文件上传成功: å­¦çä¸ªäººè¯¾è¡¨_23251109107.xls, 大小: 27648 字节
+[2025-06-08 15:00:13] INFO: 成功解析课程表，共11门课程

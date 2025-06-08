@@ -84,11 +84,6 @@ exports.saveVideo = async (req, res) => {
  * @param {Object} req - 请求对象
  * @param {Object} res - 响应对象
  */
-/**
- * 获取推荐视频
- * @param {Object} req - 请求对象
- * @param {Object} res - 响应对象
- */
 exports.getRecommendations = async (req, res) => {
   try {
     const { keyword, limit = 20 } = req.query;

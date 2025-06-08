@@ -24,10 +24,6 @@ window.onerror = function(message, source, lineno, colno, error) {
 
 // 应用程序配置
 const AppConfig = {
-    defaultVideoQuality: '720',
-    defaultPlaybackSpeed: '1.0',
-    defaultVolume: 80,
-    autoplay: true,
     theme: 'light',
     apiBaseUrl: 'https://api.courser.com' // 假设的API地址
 };
@@ -40,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // 初始化各个模块
         UserAuth.init();
         CourseManager.init();
-        VideoPlayer.init();
         UserSettings.init();
         
         // 绑定全局事件

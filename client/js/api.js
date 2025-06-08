@@ -185,15 +185,7 @@ const API = {
             });
         },
         
-        // 更新观看历史
-        async updateWatchHistory(courseId, watchData) {
-            return API.request(`/courses/${courseId}/watch`, {
-                method: 'POST',
-                body: JSON.stringify(watchData)
-            });
-        },
         
-        // 上传课程表
         // 上传课程表
         async uploadSchedule(formData) {
             // 使用直接的fetch调用，而不是通过request方法
@@ -270,12 +262,6 @@ const API = {
             return API.request(endpoint);
         },
         
-        // 获取观看历史
-        async getWatchHistory(params = {}) {
-            const queryParams = new URLSearchParams(params).toString();
-            const endpoint = `/user/history${queryParams ? `?${queryParams}` : ''}`;
-            return API.request(endpoint);
-        },
         
         // 获取用户设置
         async getSettings() {

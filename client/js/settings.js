@@ -6,11 +6,6 @@
 const UserSettings = {
     // 用户设置数据
     settings: {
-        // 视频设置
-        defaultQuality: '720',
-        defaultSpeed: '1.0',
-        volumeLevel: 80,
-        autoplay: true,
         
         // 界面设置
         theme: 'light',
@@ -176,13 +171,6 @@ const UserSettings = {
         // 应用字体大小
         this.applyFontSize();
         
-        // 如果视频播放器已初始化，则更新视频设置
-        if (typeof VideoPlayer !== 'undefined') {
-            VideoPlayer.settings.quality = this.settings.defaultQuality;
-            VideoPlayer.settings.playbackSpeed = this.settings.defaultSpeed;
-            VideoPlayer.settings.volume = this.settings.volumeLevel;
-            VideoPlayer.settings.autoplay = this.settings.autoplay;
-        }
         
         Logger.info('设置已应用');
     },
@@ -226,10 +214,6 @@ const UserSettings = {
     // 重置所有设置为默认值
     resetSettings: function() {
         this.settings = {
-            defaultQuality: AppConfig.defaultVideoQuality,
-            defaultSpeed: AppConfig.defaultPlaybackSpeed,
-            volumeLevel: AppConfig.defaultVolume,
-            autoplay: AppConfig.autoplay,
             theme: AppConfig.theme,
             fontSize: 'medium',
             notifications: true

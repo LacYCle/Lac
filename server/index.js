@@ -116,7 +116,6 @@ app.post('/api/courses/upload', authenticate, upload.single('file'), handleUploa
     // 添加更详细的日志
     logger.info(`文件上传成功: ${req.file.originalname}, 大小: ${req.file.size} 字节`);
     
-    // 处理课程表文件
     // 解析课程表文件
     const parsedCourses = await parseFile(req.file.path);
     
