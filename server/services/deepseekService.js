@@ -40,6 +40,7 @@ async function parseCourseSchedule(fileContent, fileType) {
 
     // 从响应中提取JSON数据
     const assistantMessage = completion.choices[0].message.content;
+    logger.info(`Deepseek API返回的原始消息: ${assistantMessage}`); // 添加这一行
     
     // 尝试解析JSON
     try {

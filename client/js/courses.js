@@ -36,14 +36,14 @@ const CourseManager = {
         // 搜索按钮
         document.getElementById('searchButton').addEventListener('click', () => {
             const query = document.getElementById('searchInput').value.trim();
-            this.searchCourses(query);
+            this.getRecommendations(query);
         });
         
         // 搜索输入框回车事件
         document.getElementById('searchInput').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 const query = e.target.value.trim();
-                this.searchCourses(query);
+                this.getRecommendations(query);
             }
         });
         

@@ -260,95 +260,6 @@ class Course {
     }
   }
 
-  /**
-   * 更新观看历史
-   * @param {number} userId - 用户ID
-   * @param {number} courseId - 课程ID
-   * @param {number} position - 视频播放位置（秒）
-   * @param {number} progress - 观看进度（百分比）
-   * @param {boolean} watched - 是否已看完
-   * @returns {Promise<boolean>} - 更新成功返回true
-   */
-  static async updateWatchHistory(userId, courseId, position, progress, watched = false) {
-    try {
-      // 检查是否已有观看记录
-      const [existingRows] = await pool.query(
-        'SELECT id FROM watch_history WHERE user_id = ? AND course_id = ?',
-        [userId, courseId]
-      );
-      
-      if (existingRows.length > 0) {
-        // 更新现有记录
-        await pool.query(
-          `UPDATE watch_history 
-           SET last_position = ?, progress = ?, watched = ?, updated_at = NOW() 
-           WHERE user_id = ? AND course_id = ?`,
-          [position, progress, watched, userId, courseId]
-        );
-      } else {
-        // 创建新记录
-        await pool.query(
-          `INSERT INTO watch_history (user_id, course_id, last_position, progress, watched) 
-           VALUES (?, ?, ?, ?, ?)`,
-          [userId, courseId, position, progress, watched]
-        );
-      }
-      
-      return true;
-    } catch (error) {
-      console.error('更新观看历史失败:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * 获取用户观看历史
-   * @param {number} userId - 用户ID
-   * @param {Object} options - 查询选项
-   * @returns {Promise<Array>} - 返回观看历史列表
-   */
-  static async getWatchHistory(userId, options = {}) {
-    try {
-      const limit = options.limit || 20;
-      const offset = options.offset || 0;
-      
-      const [rows] = await pool.query(
-        `SELECT c.*, w.progress, w.last_position, w.watched, w.updated_at as last_watched 
-         FROM courses c 
-         JOIN watch_history w ON c.id = w.course_id 
-         WHERE w.user_id = ? 
-         ORDER BY w.updated_at DESC LIMIT ? OFFSET ?`,
-        [userId, limit, offset]
-      );
-      
-      return rows;
-    } catch (error) {
-      console.error('获取观看历史失败:', error);
-      throw error;
-    }
-  }
-
-  /**
-   * 获取课程的观看状态
-   * @param {number} userId - 用户ID
-   * @param {number} courseId - 课程ID
-   * @returns {Promise<Object|null>} - 返回观看状态或null
-   */
-  static async getWatchStatus(userId, courseId) {
-    try {
-      const [rows] = await pool.query(
-        `SELECT progress, last_position, watched, updated_at as last_watched 
-         FROM watch_history 
-         WHERE user_id = ? AND course_id = ?`,
-        [userId, courseId]
-      );
-      
-      return rows.length ? rows[0] : null;
-    } catch (error) {
-      console.error('获取观看状态失败:', error);
-      throw error;
-    }
-  }
 
   
   /**
@@ -384,8 +295,6 @@ static async createBatch(coursesData) {
   }
 }
 }
-
-
 
 
 module.exports = Course;

@@ -15,7 +15,7 @@ const logger = require('./utils/logger');
 // 导入控制器
 const courseController = require('./controllers/courseController');
 const videoController = require('./controllers/videoController');
-const authController = require('./controllers/authController'); // 添加这一行
+const authController = require('./controllers/authController'); 
 
 // 创建Express应用
 const app = express();
@@ -99,6 +99,7 @@ app.post('/api/videos', authenticate, [
 // 文件上传路由
 // 在文件上传路由部分添加
 const { parseFile } = require('./services/fileParserService');
+const Course = require('./models/Course'); // 引入Course模型
 
 // 课程表上传路由
 app.post('/api/courses/upload', authenticate, upload.single('file'), handleUploadError, async (req, res) => {
@@ -119,7 +120,15 @@ app.post('/api/courses/upload', authenticate, upload.single('file'), handleUploa
     // 解析课程表文件
     const parsedCourses = await parseFile(req.file.path);
     
-    res.json({ 
+    // 将解析后的课程数据保存到数据库
+    if (parsedCourses && parsedCourses.length > 0) {
+      const savedCourses = await Course.createBatch(parsedCourses);
+      logger.info(`成功保存 ${savedCourses.length} 门课程到数据库`);
+    } else {
+      logger.info('没有解析到课程数据，无需保存到数据库');
+    }
+    
+    res.json({
       message: '课程表上传成功',
       file: {
         filename: req.file.filename,
