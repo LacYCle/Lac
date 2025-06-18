@@ -117,14 +117,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5>Courser</h5>
-                    <p class="text-muted">您的个性化在线学习平台</p>
+                    <p class="text-muted">开发战线长达一个学期的期末设计</p>
                 </div>
                 <div class="col-md-3">
                     <h5>链接</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white-50">关于我们</a></li>
-                        <li><a href="#" class="text-white-50">联系我们</a></li>
-                        <li><a href="#" class="text-white-50">帮助中心</a></li>
+                        <li><a href="#" class="text-white-50" data-toggle="modal" data-target="#aboutModal">关于我们</a></li>
+                        <li><a href="#" class="text-white-50" data-toggle="modal" data-target="#contactModal">联系我们</a></li>
+                        <li><a href="#" class="text-white-50" data-toggle="modal" data-target="#helpModal">帮助中心</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -259,50 +259,6 @@
         </div>
     </div>
 
-    <!-- 视频播放模态框 -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="videoTitle">视频标题</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body p-0">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <video id="videoPlayer" class="embed-responsive-item" controls>
-                            <source src="" type="video/mp4">
-                            您的浏览器不支持 HTML5 视频。
-                        </video>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-between">
-                    <div>
-                        <button type="button" class="btn btn-outline-primary mr-2" id="favoriteButton">
-                            <i class="far fa-heart"></i> 收藏
-                        </button>
-                        <button type="button" class="btn btn-outline-secondary" id="markWatchedButton">
-                            <i class="far fa-check-circle"></i> 标记为已观看
-                        </button>
-                    </div>
-                    <div>
-                        <div class="dropdown d-inline-block">
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="playbackSpeedDropdown" data-toggle="dropdown">
-                                <i class="fas fa-tachometer-alt"></i> 播放速度
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a class="dropdown-item" href="#">0.5x</a>
-                                <a class="dropdown-item" href="#">1.0x</a>
-                                <a class="dropdown-item" href="#">1.5x</a>
-                                <a class="dropdown-item" href="#">2.0x</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- 设置模态框 -->
     <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -316,62 +272,109 @@
                 </div>
                 <div class="modal-body">
                     <form id="settingsForm">
-                        <h6 class="font-weight-bold mb-3">视频设置</h6>
                         <div class="form-group">
-                            <label for="defaultQuality">默认画质</label>
-                            <select class="form-control" id="defaultQuality">
-                                <option value="1080">高清 (1080p)</option>
-                                <option value="720" selected>标清 (720p)</option>
-                                <option value="480">流畅 (480p)</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="defaultSpeed">默认播放速度</label>
-                            <select class="form-control" id="defaultSpeed">
-                                <option value="0.5">0.5x</option>
-                                <option value="1.0" selected>1.0x</option>
-                                <option value="1.5">1.5x</option>
-                                <option value="2.0">2.0x</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="volumeLevel">默认音量</label>
-                            <input type="range" class="custom-range" min="0" max="100" value="80" id="volumeLevel">
-                            <div class="d-flex justify-content-between">
-                                <small>0%</small>
-                                <small id="volumeValue">80%</small>
-                                <small>100%</small>
-                            </div>
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="autoplay" checked>
-                            <label class="form-check-label" for="autoplay">自动播放视频</label>
-                        </div>
-                        <hr>
-                        <h6 class="font-weight-bold mb-3">界面设置</h6>
-                        <div class="form-group">
-                            <label>主题</label>
-                            <div class="btn-group btn-group-toggle w-100" data-toggle="buttons">
-                                <label class="btn btn-outline-primary active">
-                                    <input type="radio" name="theme" id="lightTheme" checked> 浅色
-                                </label>
-                                <label class="btn btn-outline-primary">
-                                    <input type="radio" name="theme" id="darkTheme"> 深色
-                                </label>
-                                <label class="btn btn-outline-primary">
-                                    <input type="radio" name="theme" id="systemTheme"> 跟随系统
-                                </label>
+                            <label>主题颜色</label>
+                            <div class="theme-colors d-flex flex-wrap">
+                                <div class="color-option mr-3 mb-3" data-color="#007bff">
+                                    <input type="radio" name="themeColor" id="colorBlue" value="#007bff" checked>
+                                    <label for="colorBlue" class="color-circle bg-primary"></label>
+                                </div>
+                                <div class="color-option mr-3 mb-3" data-color="#28a745">
+                                    <input type="radio" name="themeColor" id="colorGreen" value="#28a745">
+                                    <label for="colorGreen" class="color-circle bg-success"></label>
+                                </div>
+                                <div class="color-option mr-3 mb-3" data-color="#dc3545">
+                                    <input type="radio" name="themeColor" id="colorRed" value="#dc3545">
+                                    <label for="colorRed" class="color-circle bg-danger"></label>
+                                </div>
+                                <div class="color-option mr-3 mb-3" data-color="#ffc107">
+                                    <input type="radio" name="themeColor" id="colorYellow" value="#ffc107">
+                                    <label for="colorYellow" class="color-circle bg-warning"></label>
+                                </div>
+                                <div class="color-option mr-3 mb-3" data-color="#6f42c1">
+                                    <input type="radio" name="themeColor" id="colorPurple" value="#6f42c1">
+                                    <label for="colorPurple" class="color-circle bg-purple"></label>
+                                </div>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary" id="saveSettings">保存设置</button>
+                    <button type="button" class="btn btn-primary" id="saveSettings">保存</button>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <!-- 关于我们模态框 -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">关于我们</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>大家早上坏</p>
+                    <p> 本项目由以下成员共同完成：</p>
+                    <p>
+                        1. 吴逸朗<br>
+                        2. 邓坤昌<br>
+                        3. 黄雅诗<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 支持我们模态框 -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">支持我们</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="src/QRcode.png" 
+                         alt="QRcode" 
+                         class="img-fluid mb-3">
+                    <p class="mb-0">本项目所有收入均用于资助作者今天的午饭</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 帮助中心模态框 -->
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">帮助中心</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>常见问题</h6>
+                    <ul>
+                        <li>如何注册账号？</li>
+                        <li>如何上传课程表？</li>
+                        <li>如何收藏课程？</li>
+                        <li>如何观看视频？</li>
+                    </ul>
+                    <p>如果您有其他问题，我们也解决不了。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- JavaScript引用 -->
     <script src="libs/jquery/jquery-3.6.0.min.js"></script>

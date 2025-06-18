@@ -35,10 +35,16 @@ app.use(morgan('dev'));
 // 测试数据库连接并初始化
 (async () => {
   try {
+    // 先初始化数据库（创建数据库）
+    await initDatabase();
+    
+    // 然后测试连接
     const connected = await testConnection();
     if (connected) {
-      await initDatabase();
       logger.info('数据库初始化成功');
+    } else {
+      logger.error('数据库连接测试失败');
+      process.exit(1);
     }
   } catch (error) {
     logger.error(`数据库初始化失败: ${error.message}`);

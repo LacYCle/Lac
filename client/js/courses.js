@@ -19,6 +19,47 @@ const CourseManager = {
         
         // 从本地存储加载收藏和已观看数据
         this.loadUserData();
+        
+        // 加载课程数据
+        this.loadCourses();
+    },
+    
+    // 加载课程数据
+    loadCourses: function() {
+        // 检查用户是否已登录
+        if (!UserAuth.isLoggedIn()) {
+            // 用户未登录，显示提示信息
+            const coursesList = document.getElementById('coursesList');
+            if (coursesList) {
+                coursesList.innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <i class="fas fa-lock text-muted mb-3" style="font-size: 3rem;"></i>
+                        <h4 class="text-muted">暂无课程</h4>
+                    </div>
+                `;
+            }
+            return;
+        }
+        
+        // 用户已登录，显示加载状态
+        showLoadingMessage('正在加载课程数据...');
+        
+        // 调用API获取课程列表
+        API.courses.getList()
+            .then(data => {
+                // 设置课程数据并渲染
+                this.setCourses(data.courses || []);
+                
+                // 隐藏加载状态
+                hideLoadingMessage();
+                
+                Logger.info('课程数据加载成功');
+            })
+            .catch(error => {
+                hideLoadingMessage();
+                showErrorMessage(`加载课程失败: ${error.message}`);
+                Logger.error('加载课程数据失败', error);
+            });
     },
     
     // 绑定事件处理
@@ -177,7 +218,7 @@ const CourseManager = {
         console.log('筛选后的收藏课程:', favoriteCourses.map(c => ({id: c.id, title: c.title})));
         
         // 如果没有收藏，显示空状态
-        if (favoriteCourses.length === 0) {
+        if (this.favorites.length === 0 || favoriteCourses.length === 0) {
             favoritesList.innerHTML = '';
             emptyFavorites.classList.remove('d-none');
             return;
@@ -189,13 +230,10 @@ const CourseManager = {
         
         // 渲染收藏课程
         favoriteCourses.forEach(course => {
-            const isWatched = this.watchedCourses.some(id => parseInt(id) === parseInt(course.id));
-            
             const courseCard = document.createElement('div');
             courseCard.className = 'col-md-6 col-lg-4 mb-4';
             courseCard.innerHTML = `
-                <div class="card course-card">
-                    ${isWatched ? '<span class="watched-badge"><i class="fas fa-check-circle mr-1"></i>已观看</span>' : ''}
+                <div class="card course-card" data-id="${course.id}">
                     <span class="favorite-badge"><i class="fas fa-heart mr-1"></i>已收藏</span>
                     <div class="card-cover">
                         <h5 class="cover-title">${course.title}</h5>
@@ -235,11 +273,20 @@ const CourseManager = {
     bindFavoriteCardEvents: function() {
         // 收藏按钮点击事件
         document.querySelectorAll('#favoritesList .toggle-favorite').forEach(button => {
-            button.addEventListener('click', (e) => {
+            button.addEventListener('click', async (e) => {
                 const courseId = parseInt(e.currentTarget.getAttribute('data-id'));
                 this.toggleFavorite(courseId);
                 
-                // 更新收藏区域显示
+                // 获取要移除的卡片元素
+                const card = e.currentTarget.closest('.col-md-6');
+                
+                // 添加收缩动画
+                card.style.transition = 'all 0.3s ease-out';
+                card.style.transform = 'scale(0.8)';
+                card.style.opacity = '0';
+                
+                // 等待动画完成后更新收藏区域
+                await new Promise(resolve => setTimeout(resolve, 300));
                 this.renderFavorites();
                 
                 // 保存用户数据
@@ -406,48 +453,23 @@ const CourseManager = {
                 const index = parseInt(e.currentTarget.getAttribute('data-index'));
                 const course = this.recommendedCourses[index];
                 
-                // 如果没有ID，生成一个
+                // 确保课程有唯一ID
                 if (!course.id) {
-                    course.id = Date.now() + Math.floor(Math.random() * 1000);
+                    course.id = parseInt(Date.now() + Math.floor(Math.random() * 1000));
+                } else {
+                    course.id = parseInt(course.id);
                 }
-                
-                // 确保ID是数字类型
-                course.id = parseInt(course.id);
                 
                 // 将课程添加到课程列表中（确保在切换收藏状态前添加）
                 if (!this.courses.some(c => parseInt(c.id) === course.id)) {
-                    // 创建一个深拷贝，避免引用问题
                     const courseCopy = JSON.parse(JSON.stringify(course));
                     this.courses.push(courseCopy);
                 }
                 
                 this.toggleFavorite(course.id);
                 
-                // 更新按钮状态 - 使用some而不是includes
-                const isFavorite = this.favorites.some(id => parseInt(id) === course.id);
-                e.currentTarget.innerHTML = `<i class="${isFavorite ? 'fas' : 'far'} fa-heart mr-1"></i>${isFavorite ? '取消收藏' : '收藏'}`;
-                e.currentTarget.classList.toggle('btn-outline-danger', isFavorite);
-                e.currentTarget.classList.toggle('btn-outline-secondary', !isFavorite);
-                
-                // 更新收藏标记
-                const card = e.currentTarget.closest('.card');
-                if (isFavorite) {
-                    if (!card.querySelector('.favorite-badge')) {
-                        const badge = document.createElement('span');
-                        badge.className = 'favorite-badge';
-                        badge.innerHTML = '<i class="fas fa-heart mr-1"></i>已收藏';
-                        card.prepend(badge);
-                    }
-                } else {
-                    const badge = card.querySelector('.favorite-badge');
-                    if (badge) badge.remove();
-                }
-                
                 // 保存用户数据
                 this.saveUserData();
-                
-                // 立即更新收藏区域显示
-                this.renderFavorites();
             });
         });
     },
@@ -505,7 +527,6 @@ const CourseManager = {
     
     // 切换收藏状态
     toggleFavorite: function(courseId) {
-        // 确保courseId是数字类型
         courseId = parseInt(courseId);
         
         const index = this.favorites.findIndex(id => parseInt(id) === courseId);
@@ -515,8 +536,9 @@ const CourseManager = {
             // 添加到收藏
             this.favorites.push(courseId);
             // 确保课程数据被保存
-            if (!this.courses.find(c => parseInt(c.id) === courseId)) {
-                this.courses.push(course);
+            if (!this.courses.some(c => parseInt(c.id) === courseId)) {
+                const courseCopy = JSON.parse(JSON.stringify(course));
+                this.courses.push(courseCopy);
             }
             Logger.info(`课程 ID:${courseId} 已添加到收藏`);
         } else {
@@ -525,12 +547,27 @@ const CourseManager = {
             Logger.info(`课程 ID:${courseId} 已从收藏中移除`);
         }
         
+        // 更新所有相关按钮的状态
+        const isFavorite = this.favorites.some(id => parseInt(id) === courseId);
+        document.querySelectorAll(`.toggle-favorite[data-id="${courseId}"], .toggle-favorite[data-index]`).forEach(button => {
+            const index = button.getAttribute('data-index');
+            if (index !== null) {
+                const course = this.recommendedCourses[parseInt(index)];
+                if (parseInt(course.id) === courseId) {
+                    button.innerHTML = `<i class="${isFavorite ? 'fas' : 'far'} fa-heart mr-1"></i>${isFavorite ? '取消收藏' : '收藏'}`;
+                    button.classList.toggle('btn-outline-danger', isFavorite);
+                    button.classList.toggle('btn-outline-secondary', !isFavorite);
+                }
+            }
+        });
+        
         // 保存到本地存储
         this.saveUserData();
         
         // 重新渲染收藏列表
         this.renderFavorites();
     },
+    
     
     // 切换已观看状态
     toggleWatched: function(courseId) {

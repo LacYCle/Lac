@@ -36,7 +36,7 @@ const UserAuth = {
     // 检查用户会话
     checkSession: function() {
         try {
-            const userSession = localStorage.getItem('userSession');
+            const userSession = sessionStorage.getItem('userSession');
             if (userSession) {
                 this.currentUser = JSON.parse(userSession);
                 this.updateUIForLoggedInUser();
@@ -46,7 +46,7 @@ const UserAuth = {
             }
         } catch (error) {
             Logger.error('检查用户会话失败', error);
-            localStorage.removeItem('userSession');
+            sessionStorage.removeItem('userSession');
             this.updateUIForLoggedOutUser();
         }
     },
@@ -81,7 +81,7 @@ const UserAuth = {
                 };
                 
                 this.currentUser = user;
-                localStorage.setItem('userSession', JSON.stringify(user));
+                sessionStorage.setItem('userSession', JSON.stringify(user));
                 
                 this.updateUIForLoggedInUser();
                 $('#loginModal').modal('hide');
@@ -142,7 +142,7 @@ const UserAuth = {
                 };
                 
                 this.currentUser = user;
-                localStorage.setItem('userSession', JSON.stringify(user));
+                sessionStorage.setItem('userSession', JSON.stringify(user));
                 
                 this.updateUIForLoggedInUser();
                 $('#registerModal').modal('hide');
@@ -166,13 +166,16 @@ const UserAuth = {
         try {
             const username = this.currentUser ? this.currentUser.username : '';
             
-            localStorage.removeItem('userSession');
+            sessionStorage.removeItem('userSession');
             this.currentUser = null;
             
             this.updateUIForLoggedOutUser();
             
             Logger.info(`用户 ${username} 已退出登录`);
             showSuccessMessage('您已成功退出登录');
+            
+            // 添加页面刷新，回到未登录状态
+            location.reload();
         } catch (error) {
             Logger.error('退出登录失败', error);
         }
@@ -202,7 +205,7 @@ const UserAuth = {
         showWarningMessage('您的登录会话已过期，请重新登录');
         
         // 清除本地存储中的会话信息
-        localStorage.removeItem('userSession');
+        sessionStorage.removeItem('userSession');
         this.currentUser = null;
         
         // 更新UI

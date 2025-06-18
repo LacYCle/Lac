@@ -259,8 +259,19 @@ class Course {
       throw error;
     }
   }
-
-
+/**
+  * 清空课程表
+  * @returns {Promise<void>}
+  */
+static async clearAll() {
+  try {
+    await pool.query('DELETE FROM courses');
+    console.log('课程表已清空');
+  } catch (error) {
+    console.error('清空课程表失败:', error);
+    throw error;
+  }
+}
   
   /**
  * 批量创建课程
@@ -269,15 +280,21 @@ class Course {
  */
 static async createBatch(coursesData) {
   try {
-      // 只保留必要的字段
+      // 只保留必要的字段，并与数据库表结构匹配
       const values = coursesData.map(course => [
           course.title,
-          course.teacher
+          course.teacher ? `${course.teacher}` : '', // 将教师信息放入description字段
+          null, // cover_url
+          null, // video_url
+          null, // duration
+          '课程表导入', // source
+          null, // source_id
+          null  // user_id
       ]);
       
-      // 使用批量插入
+      // 使用批量插入，确保字段名与数据库表结构匹配
       const [result] = await pool.query(
-          'INSERT INTO courses (title, teacher) VALUES ?',
+          'INSERT INTO courses (title, teacher, cover_url, video_url, duration, source, source_id, user_id) VALUES ?',
           [values]
       );
       
@@ -285,7 +302,8 @@ static async createBatch(coursesData) {
       return coursesData.map((course, index) => ({
           id: result.insertId + index,
           title: course.title,
-          teacher: course.teacher,
+          description: course.teacher ? `由${course.teacher}教授` : '',
+          source: '课程表导入',
           created_at: new Date(),
           updated_at: new Date()
       }));

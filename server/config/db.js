@@ -44,6 +44,7 @@ async function initDatabase() {
     
     await conn.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME}`);
     await conn.end();
+    console.log(`数据库 ${process.env.DB_NAME} 创建成功或已存在`);
     
     // 创建用户表
     await pool.query(`

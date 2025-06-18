@@ -24,22 +24,7 @@ async function parseCSV(filePath) {
     const parsedData = await parseCourseSchedule(fileContent, 'csv');
     return parsedData;
     
-    // 如果Deepseek解析失败，使用传统方法解析
-    /* 
-    return new Promise((resolve, reject) => {
-      fs.createReadStream(filePath)
-        .pipe(csv())
-        .on('data', (data) => results.push(data))
-        .on('end', () => {
-          logger.info(`CSV文件解析完成，共${results.length}行数据`);
-          resolve(results);
-        })
-        .on('error', (error) => {
-          logger.error(`CSV文件解析错误: ${error.message}`);
-          reject(error);
-        });
-    });
-    */
+    
   } catch (error) {
     logger.error(`CSV文件解析失败: ${error.message}`);
     throw new Error(`CSV文件解析失败: ${error.message}`);

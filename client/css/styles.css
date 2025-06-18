@@ -191,6 +191,11 @@ body {
     right: 10px;
     background-color: rgba(255, 255, 255, 0.9);
     color: #e74c3c;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.course-card.removing-favorite .favorite-badge {
+    opacity: 0;
 }
 
 .watched-badge {
@@ -235,9 +240,33 @@ body {
     font-weight: 500;
 }
 
+:root {
+    --primary-color: #007bff;
+}
+
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    filter: brightness(90%);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
 }
 
 .btn-primary:hover {
@@ -402,4 +431,33 @@ body {
 .fade-out {
     opacity: 0;
     transition: opacity 0.3s ease-out;
+}
+
+/* 主题颜色设置样式 */
+.theme-colors .color-option {
+    position: relative;
+}
+
+.theme-colors .color-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.theme-colors .color-circle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.theme-colors .color-option input[type="radio"]:checked + .color-circle {
+    border-color: #000;
+    transform: scale(1.1);
+}
+
+.bg-purple {
+    background-color: #6f42c1;
 }

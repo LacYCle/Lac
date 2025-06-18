@@ -8,51 +8,62 @@ const API = {
     baseUrl: 'http://localhost:3000/api',
     
     // 获取授权头信息
-    getAuthHeaders: function() {
-        const userSession = localStorage.getItem('userSession');
-        if (!userSession) return {};
+    getAuthHeaders: function(excludeContentType = false) {
+        const headers = {};
         
-        try {
-            const user = JSON.parse(userSession);
-            if (user && user.token) {
-                return { 'Authorization': `Bearer ${user.token}` };
-            }
-        } catch (error) {
-            Logger.error('获取授权信息失败', error);
+        // 只在非文件上传请求时添加Content-Type
+        if (!excludeContentType) {
+            headers['Content-Type'] = 'application/json';
         }
         
-        return {};
+        // 从会话存储中获取令牌
+        const userSession = sessionStorage.getItem('userSession');
+        if (userSession) {
+            const user = JSON.parse(userSession);
+            if (user && user.token) {
+                headers['Authorization'] = `Bearer ${user.token}`;
+            }
+        }
+        
+        return headers;
     },
     
-    // 令牌刷新方法
+    // 刷新令牌
     refreshToken: async function() {
         try {
-            const userSession = localStorage.getItem('userSession');
-            if (!userSession) return false;
+            // 检查是否有用户会话
+            const userSession = sessionStorage.getItem('userSession');
+            if (!userSession) {
+                return false;
+            }
             
             const user = JSON.parse(userSession);
-            if (!user || !user.token) return false;
+            if (!user || !user.token) {
+                return false;
+            }
             
             // 调用刷新令牌API
             const response = await fetch(`${this.baseUrl}/auth/refresh-token`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${user.token}`
                 }
             });
             
-            if (!response.ok) return false;
-            
-            const data = await response.json();
-            if (data.token) {
-                // 更新本地存储中的令牌
-                user.token = data.token;
-                localStorage.setItem('userSession', JSON.stringify(user));
-                return true;
+            if (!response.ok) {
+                return false;
             }
             
-            return false;
+            const data = await response.json();
+            if (!data.success || !data.token) {
+                return false;
+            }
+            
+            // 更新令牌
+            user.token = data.token;
+            sessionStorage.setItem('userSession', JSON.stringify(user));
+            
+            return true;
         } catch (error) {
             Logger.error('刷新令牌失败', error);
             return false;
@@ -188,31 +199,26 @@ const API = {
         
         // 上传课程表
         async uploadSchedule(formData) {
-            // 使用直接的fetch调用，而不是通过request方法
             const url = `${API.baseUrl}/courses/upload`;
             
-            // 获取授权头信息
-            const authHeaders = API.getAuthHeaders();
+            // 获取不包含Content-Type的授权头信息
+            const authHeaders = API.getAuthHeaders(true);
             
-            // 创建请求选项，不设置Content-Type
             const fetchOptions = {
                 method: 'POST',
-                headers: authHeaders, // 只包含授权头，不设置Content-Type
+                headers: authHeaders,
                 body: formData
             };
             
             Logger.info(`API请求: POST ${url}`);
-            console.log('发送文件上传请求到:', url);
             
             try {
-                // 尝试刷新令牌后再发送请求
                 await API.refreshToken();
                 
-                // 重新获取最新的授权头
-                fetchOptions.headers = API.getAuthHeaders();
+                // 重新获取不包含Content-Type的授权头
+                fetchOptions.headers = API.getAuthHeaders(true);
                 
                 const response = await fetch(url, fetchOptions);
-                console.log('响应状态:', response.status, response.statusText);
                 
                 if (!response.ok) {
                     const errorData = await response.json().catch(() => ({

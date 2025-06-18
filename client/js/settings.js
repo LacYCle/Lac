@@ -70,127 +70,39 @@ const UserSettings = {
     // 绑定设置相关事件
     bindEvents: function() {
         // 设置按钮点击事件
-        document.getElementById('settingsButton').addEventListener('click', () => {
-            this.populateSettingsForm();
+        document.getElementById('settingsButton').addEventListener('click', (e) => {
+            e.preventDefault(); // 阻止默认行为
             $('#settingsModal').modal('show');
         });
         
-        // 设置表单提交事件
-        document.getElementById('settingsForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            this.saveSettingsFromForm();
-        });
-        
-        // 音量滑块变化事件
-        document.getElementById('volumeLevel').addEventListener('input', (e) => {
-            document.getElementById('volumeValue').textContent = e.target.value + '%';
-        });
-        
-        // 主题切换事件
-        const themeRadios = document.querySelectorAll('input[name="theme"]');
-        themeRadios.forEach(radio => {
-            radio.addEventListener('change', () => {
-                if (radio.checked) {
-                    this.setTheme(radio.value);
-                }
-            });
+        // 保存设置按钮点击事件
+        document.getElementById('saveSettings').addEventListener('click', () => {
+            const selectedColor = document.querySelector('input[name="themeColor"]:checked').value;
+            this.settings.themeColor = selectedColor;
+            this.saveSettings();
+            this.applyThemeColor();
+            $('#settingsModal').modal('hide');
+            showSuccessMessage('设置已保存');
         });
     },
     
-    // 填充设置表单
-    populateSettingsForm: function() {
-        // 设置视频画质
-        document.getElementById('defaultQuality').value = this.settings.defaultQuality;
+    // 应用主题颜色
+    applyThemeColor: function() {
+        const color = this.settings.themeColor || '#007bff';
+        document.documentElement.style.setProperty('--primary-color', color);
         
-        // 设置播放速度
-        document.getElementById('defaultSpeed').value = this.settings.defaultSpeed;
-        
-        // 设置音量
-        const volumeSlider = document.getElementById('volumeLevel');
-        volumeSlider.value = this.settings.volumeLevel;
-        document.getElementById('volumeValue').textContent = this.settings.volumeLevel + '%';
-        
-        // 设置自动播放
-        document.getElementById('autoplay').checked = this.settings.autoplay;
-        
-        // 设置主题
-        const themeRadio = document.querySelector(`input[name="theme"][value="${this.settings.theme}"]`);
-        if (themeRadio) {
-            themeRadio.checked = true;
-        }
-        
-        // 设置字体大小
-        const fontSizeRadio = document.querySelector(`input[name="fontSize"][value="${this.settings.fontSize}"]`);
-        if (fontSizeRadio) {
-            fontSizeRadio.checked = true;
-        }
-        
-        // 设置通知
-        document.getElementById('enableNotifications').checked = this.settings.notifications;
-    },
-    
-    // 从表单保存设置
-    saveSettingsFromForm: function() {
-        // 获取视频设置
-        this.settings.defaultQuality = document.getElementById('defaultQuality').value;
-        this.settings.defaultSpeed = document.getElementById('defaultSpeed').value;
-        this.settings.volumeLevel = parseInt(document.getElementById('volumeLevel').value);
-        this.settings.autoplay = document.getElementById('autoplay').checked;
-        
-        // 获取界面设置
-        const themeRadio = document.querySelector('input[name="theme"]:checked');
-        if (themeRadio) {
-            this.settings.theme = themeRadio.value;
-        }
-        
-        const fontSizeRadio = document.querySelector('input[name="fontSize"]:checked');
-        if (fontSizeRadio) {
-            this.settings.fontSize = fontSizeRadio.value;
-        }
-        
-        this.settings.notifications = document.getElementById('enableNotifications').checked;
-        
-        // 保存设置
-        this.saveSettings();
-        
-        // 应用设置
-        this.applySettings();
-        
-        // 关闭设置模态框
-        $('#settingsModal').modal('hide');
-        
-        // 显示成功消息
-        showSuccessMessage('设置已保存');
+        // 更新相关UI元素的颜色
+        const primaryElements = document.querySelectorAll('.btn-primary, .bg-primary');
+        primaryElements.forEach(element => {
+            element.style.backgroundColor = color;
+            element.style.borderColor = color;
+        });
     },
     
     // 应用设置
     applySettings: function() {
-        // 应用主题
-        this.applyTheme();
-        
-        // 应用字体大小
-        this.applyFontSize();
-        
-        
-        Logger.info('设置已应用');
-    },
-    
-    // 应用主题
-    applyTheme: function() {
-        if (this.settings.theme === 'dark') {
-            document.body.classList.add('dark-mode');
-        } else {
-            document.body.classList.remove('dark-mode');
-        }
-    },
-    
-    // 应用字体大小
-    applyFontSize: function() {
-        // 移除所有字体大小类
-        document.body.classList.remove('font-size-small', 'font-size-medium', 'font-size-large');
-        
-        // 添加当前字体大小类
-        document.body.classList.add(`font-size-${this.settings.fontSize}`);
+        // 应用主题颜色
+        this.applyThemeColor();
     },
     
     // 设置主题

@@ -344,30 +344,35 @@ exports.getWatchHistory = async (req, res) => {
   }
 };
 
-// 上传课程表
-exports.uploadCourseSchedule = async (req, res) => {
-    try {
-        const file = req.file;
-        
-        // 解析课程表文件
-        const courses = await fileParserService.parseFile(file.path);
-        
-        // 批量保存到数据库
-        const savedCourses = await Course.createBatch(courses);
-        
-        // 删除临时文件
-        await fs.unlink(file.path);
-        
-        res.status(200).json({
-            success: true,
-            message: '课程表上传成功',
-            data: savedCourses
-        });
-    } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: '课程表上传失败',
-            error: error.message
-        });
+/**
+ * 处理课程表上传
+ * @param {Object} req - 请求对象
+ * @param {Object} res - 响应对象
+ */
+exports.uploadSchedule = async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ message: '请选择要上传的文件' });
     }
+
+    // 在解析新课程表之前清空现有课程
+    await Course.clearAll();
+
+    // 解析文件并处理课程数据
+    const filePath = req.file.path;
+    const courses = await parseFile(filePath);
+
+    // 批量创建新课程
+    for (const course of courses) {
+      await Course.create({
+        ...course,
+        user_id: req.user.id
+      });
+    }
+
+    res.json({ message: '课程表上传成功', count: courses.length });
+  } catch (error) {
+    console.error('上传课程表失败:', error);
+    res.status(500).json({ message: '上传课程表失败，请稍后重试' });
+  }
 };
